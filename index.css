@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+:root {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+div,
+main,
+nav,
+section {
+  border: 0px solid #000;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+main nav {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  background-color: #ff8d06;
+  position: fixed;
+  width: 100%;
+}
+
+main nav ul li a {
+  color: #0f0538;
+  font-size: 1.1rem;
+}
+
+main nav ul li a:hover {
+  color: #0f0538;
+}
+
+main #welcome-section {
+  height: 500px;
+  background-color: #0f0538;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+
+main #welcome-section h1,
+main #welcome-section p {
+  text-align: center;
+}
+
+main #welcome-section h1 {
+  font-size: 4.5rem;
+  color: #ff8d06;
+  margin-top: 150px;
+}
+
+main #welcome-section p {
+  color: #fff;
+  font-size: 2.2rem;
+}
+
+main #projects {
+  background-color: #ffe7ca;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+main #projects .project-text {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+
+main #projects .project-text h2 {
+  color: #0f0538;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-top: 100px;
+}
+
+main #projects .project-title {
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+  margin-left: 30px;
+  margin-top: 80px;
+}
+
+main #projects .project-title img {
+  width: 100%;
+  display: block;
+  height: 300px;
+}
+
+main #projects .project-title .project-footer {
+  height: 60px;
+  background-color: #0f0538;
+  border-radius: 0 0 5px 5px;
+  margin-top: -10px;
+}
+
+main #projects .project-title .project-footer .project-link {
+  display: block;
+  color: #fff;
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 10px;
+  text-decoration: none;
+}
+
+main #projects .project-title .project-footer .project-link:hover {
+  color: #ff8d06;
+}
+
+main #projects .btn {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+
+main #projects .btn button {
+  display: block;
+  margin: 0 auto;
+  margin-top: 30px;
+  background-color: #0f0538;
+  padding: 10px;
+  border: 2px solid #0f0538;
+  border-radius: 5px;
+}
+
+main #projects .btn button a {
+  text-decoration: none;
+  color: #ff8d06;
+  font-size: 1.3rem;
+}
+
+main .space {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  height: 100px;
+  background-color: #ffe7ca;
+}
+
+main footer {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  background-color: #2f2167;
+}
+
+main footer .footer h2 {
+  text-align: center;
+  color: #ffe7ca;
+  margin-top: 60px;
+  font-size: 3.5rem;
+}
+
+main footer .footer p {
+  text-align: center;
+  color: #ffe7ca;
+  font-style: italic;
+  margin-top: 10px;
+  font-size: 1.5rem;
+}
+
+main footer .footer-social p {
+  text-align: center;
+  margin-top: 20px;
+}
+
+main footer .footer-social p svg {
+  margin-left: 10px;
+  color: #ffe7ca;
+}
+
+main footer .footer-social p span a {
+  text-decoration: none;
+  color: #ffe7ca;
+  font-size: 1.9rem;
+  margin-left: 10px;
+  text-shadow: 2px 2px grey;
+  line-height: 1.6;
+}
+
+@media only screen and (max-width: 1000px) {
+  main #projects .project-title {
+    -ms-flex-preferred-size: 75%;
+        flex-basis: 75%;
+    margin: 0 auto;
+    margin-top: 50px;
+  }
+}
+/*# sourceMappingURL=index.css.map */

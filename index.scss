@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+:root {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+
+$navColor: #ff8d06;
+$headerColor: #0f0538;
+$mainColor: #ffe7ca;
+$footerColor: #2f2167;
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+div,
+main,
+nav,
+section {
+  border: 0px solid #000;
+}
+
+@mixin flex-wrap {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+@mixin flex-nowrap {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+main {
+  @include flex-wrap;
+
+  nav {
+    flex-basis: 100%;
+    background-color: $navColor;
+    position: fixed;
+    width: 100%;
+
+    ul {
+      li {
+        a {
+          color: $headerColor;
+          font-size: 1.1rem;
+
+          &:hover {
+            color: $headerColor;
+          }
+        }
+      }
+    }
+  }
+
+  #welcome-section {
+    height: 500px;
+    background-color: $headerColor;
+    flex-basis: 100%;
+
+    h1,
+    p {
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 4.5rem;
+      color: $navColor;
+      margin-top: 150px;
+    }
+
+    p {
+      color: #fff;
+      font-size: 2.2rem;
+    }
+  }
+
+  #projects {
+    background-color: $mainColor;
+    flex-basis: 100%;
+    @include flex-wrap;
+
+    .project-text {
+      flex-basis: 100%;
+      h2 {
+        color: $headerColor;
+        font-size: 2.5rem;
+        text-align: center;
+        margin-top: 100px;
+      }
+    }
+
+    .project-title {
+      flex-basis: 30%;
+      margin-left: 30px;
+      margin-top: 80px;
+
+      img {
+        width: 100%;
+        display: block;
+        height: 300px;
+      }
+
+      .project-footer {
+        height: 60px;
+        background-color: $headerColor;
+        border-radius: 0 0 5px 5px;
+        margin-top: -10px;
+
+        .project-link {
+          display: block;
+          color: #fff;
+          text-align: center;
+          font-size: 1.2rem;
+          margin-top: 10px;
+          text-decoration: none;
+
+          &:hover {
+            color: $navColor;
+          }
+        }
+      }
+    }
+
+    .btn {
+      flex-basis: 100%;
+      button {
+        display: block;
+        margin: 0 auto;
+        margin-top: 30px;
+        background-color: $headerColor;
+        padding: 10px;
+        border: 2px solid $headerColor;
+        border-radius: 5px;
+
+        a {
+          text-decoration: none;
+          color: $navColor;
+          font-size: 1.3rem;
+        }
+      }
+    }
+  }
+
+  .space {
+    flex-basis: 100%;
+    height: 100px;
+    background-color: $mainColor;
+  }
+
+  footer {
+    flex-basis: 100%;
+    background-color: $footerColor;
+
+    .footer {
+      h2 {
+        text-align: center;
+        color: $mainColor;
+        margin-top: 60px;
+        font-size: 3.5rem;
+      }
+
+      p {
+        text-align: center;
+        color: $mainColor;
+        font-style: italic;
+        margin-top: 10px;
+        font-size: 1.5rem;
+      }
+    }
+
+    .footer-social {
+      p {
+        text-align: center;
+        margin-top: 20px;
+
+        svg {
+          margin-left: 10px;
+          color: $mainColor;
+        }
+
+        span {
+          a {
+            text-decoration: none;
+            color: $mainColor;
+            font-size: 1.9rem;
+            margin-left: 10px;
+            text-shadow: 2px 2px grey;
+            line-height: 1.6;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  main {
+    #projects {
+      .project-title {
+        flex-basis: 75%;
+        margin: 0 auto;
+        margin-top: 50px;
+      }
+    }
+  }
+}
